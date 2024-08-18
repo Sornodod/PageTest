@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(15, 40px); /* Количество столбцов и ширина ячейки */
+    grid-template-rows: repeat(15, 40px);    /* Количество строк и высота ячейки */
+    gap: 1px;
+    width: 600px;  /* Ширина сетки */
+    height: 600px; /* Высота сетки */
+}
+
+.cell {
+    width: 40px;  /* Ширина ячейки */
+    height: 40px; /* Высота ячейки */
+    background-color: white;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.black {
+    background-color: black;
+}
+
+.blue {
+    background-color: blue; /* Цвет башен */
+}
+
+.path {
+    position: absolute;
+    width: 30px;  /* Размер круга пути */
+    height: 30px; /* Размер круга пути */
+    background-color: red;
+    border-radius: 50%;
+    top: 5px;    /* Смещение для центрирования */
+    left: 5px;   /* Смещение для центрирования */
+}
+
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 10; /* Убедитесь, что пули находятся поверх ячеек */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
